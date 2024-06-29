@@ -9,8 +9,10 @@ func main() {
 	app := echo.New()
 
 	userHandler := handler.UserHandler{}
+	indexHandler := handler.IndexHandler{}
 
-	app.GET("/user", userHandler.HandleUserShow)
+	app.GET("/user", userHandler.HandleUserRender)
+	app.GET("/", indexHandler.HandleIndexRender)
 
 	app.Start(":3000")
 }

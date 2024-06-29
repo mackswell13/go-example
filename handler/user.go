@@ -9,6 +9,6 @@ type UserHandler struct {
 
 }
 
-func(h UserHandler) HandleUserShow(c echo.Context) error {
+func(h UserHandler) HandleUserRender(c echo.Context) error {
 	return render(c, user.Show())
 }
